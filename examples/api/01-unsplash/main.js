@@ -1,3 +1,9 @@
+if (!UNSPLASH_ACCESS_KEY) {
+  console.error('UNSPLASH_ACCESS_KEY is not defined');
+  console.info('Please copy the env.js.example file and rename it to env.js.');
+  console.info('Then set the UNSPLASH_ACCESS_KEY in the env.js file');
+}
+
 fetch('https://api.unsplash.com/photos/random', {
   headers: {
     Authorization: `Client-ID ${UNSPLASH_ACCESS_KEY}`
