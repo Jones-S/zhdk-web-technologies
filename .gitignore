@@ -1,3 +1,7 @@
+# .gitignore
+
+# Ignore all env.js files in any folder
 */**/env.js
 
+# Ignore mac specific files
 .DS_Store
