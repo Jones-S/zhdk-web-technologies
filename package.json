@@ -1,0 +1,15 @@
+{
+  "name": "zhdk-web-technologies",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/Jones-S/zhdk-web-technologies.git",
+  "author": "Jonas <git@jonasscheiwiller.ch>",
+  "license": "MIT",
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2"
+  },
+  "scripts": {
+    "start": "node server.js"
+  }
+}

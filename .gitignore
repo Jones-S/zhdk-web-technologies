@@ -8,3 +8,6 @@
 
 # Ignore all env.js files in any folder
 */**/env.js
+
+node_modules
+
