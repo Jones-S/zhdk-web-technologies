@@ -1,22 +1,7 @@
-let SPOTIFY_CLIENT_ID = false;
-let SPOTIFY_CLIENT_SECRET = false;
-let PLAYLIST_ID = "2O4cLIfSjnzLKuWQe9eZIR";
+let SPOTIFY_CLIENT_ID = "1d50e930a8b34a4998dc537704793eb2";
+let SPOTIFY_CLIENT_SECRET = "b6fbf298ba2141f49f9859341ec742dc";
+let PLAYLIST_ID = "7fXKDSXrj7RljWC4QTixrd";
 const container = document.querySelector('div[data-js="tracks"]');
-
-// Fetch the environment variables from the server
-fetch("/env")
-  .then((response) => response.json())
-  .then((data) => {
-    SPOTIFY_CLIENT_ID = data.SPOTIFY_CLIENT_ID;
-    SPOTIFY_CLIENT_SECRET = data.SPOTIFY_CLIENT_SECRET;
-    fetchAccessToken();
-  })
-  .catch((error) => {
-    console.error(
-      "Error fetching environment variables setting from main.js",
-      error
-    );
-  });
 
 function fetchPlaylist(token, playlistId) {
   console.log("token: ", token);
@@ -84,3 +69,5 @@ function fetchAccessToken() {
       console.error("Error:", error);
     });
 }
+
+fetchAccessToken();
