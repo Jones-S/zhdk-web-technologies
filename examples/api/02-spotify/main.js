@@ -21,11 +21,34 @@ function fetchPlaylist(token, playlistId) {
         data.tracks.items.forEach((item) => {
           console.log(item.track.name);
         });
+
+        addTracksToPage(data.tracks.items);
       }
     })
     .catch((error) => {
       console.error("Error:", error);
     });
+}
+
+function addTracksToPage(tracks) {
+  const ul = document.createElement("ul");
+
+  tracks.forEach((track) => {
+    console.log("track: ", track);
+    const li = document.createElement("li");
+
+    // Create a span that holds the album name
+    li.innerHTML = `<span class="album">Album: ${track.track.album.name}</span>`;
+
+    // Create another span that holds the track name
+    const trackSpan = document.createElement("span");
+    trackSpan.textContent = `Track: ${track.track.name}`;
+    trackSpan.classList.add("track");
+    li.appendChild(trackSpan);
+
+    ul.appendChild(li);
+  });
+  container.appendChild(ul);
 }
 
 fetch("https://accounts.spotify.com/api/token", {
