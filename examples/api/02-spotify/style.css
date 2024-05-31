@@ -1,0 +1,15 @@
+.photowrapper {
+  max-width: 800px;
+  margin: 0 auto;
+  font-family: monospace;
+  margin-top: 100px;
+}
+
+h1 {
+  font-size: 14px;
+  font-weight: normal;
+}
+
+img {
+  max-width: 100%;
+}
