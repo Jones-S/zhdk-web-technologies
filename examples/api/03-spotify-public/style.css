@@ -1,3 +1,7 @@
+* {
+  font-family: monospace;
+}
+
 .album {
   display: inline-block;
   padding-right: 1em;
