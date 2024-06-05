@@ -1,0 +1,17 @@
+.flex-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.flex-item {
+  margin: 10px;
+  padding: 20px;
+  background-color: #f5f5f5;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  flex-grow: 1;
+}
+
+.flex-item--big {
+  flex-grow: 3;
+}
