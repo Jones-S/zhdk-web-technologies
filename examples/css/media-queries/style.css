@@ -1,0 +1,62 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+.info {
+  display: none;
+  padding: 1rem;
+  text-align: center;
+}
+
+/* Mobile Styles */
+body {
+  background-color: #ffa391;
+}
+
+/* Tablet Styles 401px - 1024px */
+@media only screen and (min-width: 401px) {
+  body {
+    background-color: #a3b2d9;
+  }
+}
+
+/* Desktop Styles 1025px – ... */
+@media only screen and (min-width: 1025px) {
+  body {
+    background-color: #d0dec8;
+  }
+}
+
+/* 
+ * showing and hiding info texts 
+ */
+
+@media only screen and (max-width: 400px) {
+  .mobile {
+    display: block;
+  }
+}
+
+/* Tablet Styles 401px - 1024px */
+@media only screen and (min-width: 401px) and (max-width: 1024px) {
+  .tablet {
+    display: block;
+  }
+}
+
+/* Desktop Styles 1025px – ... */
+@media only screen and (min-width: 1025px) {
+  .desktop {
+    display: block;
+  }
+}
+
+/* Print styles */
+@media only print {
+  .print {
+    display: block;
+  }
+}
