@@ -1,0 +1,36 @@
+/* 01: */
+/* .snipped-code.hljs-name {
+  color: red;
+}
+
+div span.hljs-name {
+  color: blue;
+} */
+
+/* 02: */
+/* 
+span .snippet {
+  color: red;
+}
+
+span .submit-text {
+  color: blue;
+} */
+
+/* 03 */
+/* .snippet-ctas button {
+  display: inline;
+}
+
+.s-btn.hide-results {
+  display: block;
+} */
+
+/* 04: */
+.snippet div#snippet-box button span {
+  color: red;
+}
+
+.snippet-ctas span button span.submit-text {
+  color: blue;
+}
