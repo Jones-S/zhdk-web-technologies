@@ -1,5 +1,5 @@
-const SPOTIFY_CLIENT_ID = "1d50e930a8b34a4998dc537704793eb2";
-const SPOTIFY_CLIENT_SECRET = "b6fbf298ba2141f49f9859341ec742dc";
+const SPOTIFY_CLIENT_ID = "67b411e20d594f30bf7a8d3bbde54285";
+const SPOTIFY_CLIENT_SECRET = "161fc5e3df004b95af3ba8c62f3eaf54";
 const PLAYLIST_ID = "7fXKDSXrj7RljWC4QTixrd";
 const container = document.querySelector('div[data-js="tracks"]');
 
