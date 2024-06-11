@@ -6,3 +6,11 @@
   display: inline-block;
   padding-right: 1em;
 }
+
+li {
+  border: 1px solid black;
+}
+
+.highlighted {
+  color: blue;
+}

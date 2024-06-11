@@ -35,14 +35,20 @@ function addTracksToPage(tracks) {
   tracks.forEach((track) => {
     console.log("track: ", track);
     const li = document.createElement("li");
+    li.classList.add("list-item");
 
     // Create a span that holds the album name
     li.innerHTML = `<span class="album">Album: ${track.track.album.name}</span>`;
 
+    console.log("track.track.album.name: ", track.track.album.name);
+    if (track.track.album.name === "Ouest Side") {
+      li.classList.add("highlighted");
+    }
+
     // Create another span that holds the track name
     const trackSpan = document.createElement("span");
     trackSpan.textContent = `Track: ${track.track.name}`;
-    trackSpan.classList.add("track");
+    trackSpan.classList.add("song");
     li.appendChild(trackSpan);
 
     ul.appendChild(li);
