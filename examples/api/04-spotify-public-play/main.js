@@ -14,12 +14,12 @@ function fetchPlaylist(token, playlistId) {
   })
     .then((response) => response.json())
     .then((data) => {
-      console.log(data);
+      // console.log(data);
 
       if (data.tracks && data.tracks.items) {
-        data.tracks.items.forEach((item) => {
-          console.log(item.track.name);
-        });
+        // data.tracks.items.forEach((item) => {
+        //   console.log(item.track.name);
+        // });
 
         addTracksToPage(data.tracks.items);
       }
@@ -33,7 +33,7 @@ function addTracksToPage(items) {
   const ul = document.createElement("ul");
 
   items.forEach((item) => {
-    console.log("track: ", item.track);
+    // console.log("track: ", item.track);
     const li = document.createElement("li");
 
     li.innerHTML = `
@@ -73,3 +73,33 @@ function fetchAccessToken() {
 }
 
 fetchAccessToken();
+
+const audio = document.querySelector("[data-js='current-track']");
+console.log("audio: ", audio);
+
+const playButton = document.querySelector("[data-js='play']");
+const pauseButton = document.querySelector("[data-js='pause']");
+
+const toggleButton = document.querySelector("[data-js='toggle']");
+
+playButton.addEventListener("click", () => {
+  audio.play();
+});
+
+pauseButton.addEventListener("click", () => {
+  audio.pause();
+});
+
+toggleButton.addEventListener("click", () => {
+  // toggleButton.classList.toggle("playing");
+  // console.log("toggle");
+
+  // evaluate if audio is playing
+  if (audio.paused) {
+    toggleButton.classList.add("hidden");
+    audio.play();
+  } else {
+    toggleButton.classList.remove("playing");
+    audio.pause();
+  }
+});

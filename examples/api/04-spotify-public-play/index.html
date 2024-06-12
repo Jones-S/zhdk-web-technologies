@@ -13,8 +13,24 @@
     <div class="playlist">
       <h1>Spotify playlist</h1>
 
-      <div data-js="tracks">
-        <!-- here we are going to display the fetched tracks -->
+      <div class="content">
+        <div class="current-track flex-item">
+
+          <audio data-js="current-track"
+            src="https://p.scdn.co/mp3-preview/398665ccd5df24f5b67d2cd96f7ad8586ad8632a?cid=67b411e20d594f30bf7a8d3bbde54285"></audio>
+
+          <button data-js="play" class="player-control">
+            <img src="play-icon.png" alt="play icon">
+          </button>
+          <button data-js="pause" class="player-control">Pause</button>
+
+          <button data-js="toggle" class="player-control toggle">Toggle State</button>
+        </div>
+
+
+        <div data-js="tracks" class="flex-item">
+          <!-- here we are going to display the fetched tracks -->
+        </div>
       </div>
     </div>
   </div>
